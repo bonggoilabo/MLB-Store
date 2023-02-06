@@ -1,0 +1,174 @@
+.contactInfo{
+    position: fixed;
+    z-index: 999;
+    bottom: 150px;
+    right: -15px ;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    &-item{
+        margin-bottom: 5px;
+        margin-right: 10px;
+        
+        a{
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            width: 44px;
+            height: 44px;
+            line-height: 44px;
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 11%);
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            &:hover span{
+                visibility: visible;
+                opacity: 1;
+            }
+            span{
+                position: absolute;
+                top: 4px;
+                right: 55px;
+                z-index: 999999;
+                height: 32px;
+                line-height: 26px;
+                padding: 3px 10px;
+                width: auto;
+                border-radius: 5px;
+                font-size: 11px;
+                color: #fff;
+                text-align: center;
+                white-space: nowrap;
+                cursor: pointer;
+                background-color: #000;
+                opacity: 0;
+                -ms-transition: all 200ms linear;
+                -webkit-transition: all 200ms linear;
+                transition: all 200ms linear;
+                &::after{
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent transparent transparent #000;
+                    position: absolute;
+                    left: 100%;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    -ms-transition: all 200ms linear;
+                    -webkit-transition: all 200ms linear;
+                    transition: all 200ms linear;
+                }
+            }
+        }
+    }
+}
+
+
+.contactInfoRespon{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    display:flex;
+    &-item {
+        flex: 1;
+        text-align: center;
+            a {
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                width: 44px;
+                height: 44px;
+                line-height: 44px;
+                color: #fff;
+                cursor: pointer;
+                background-size: auto;
+                background-repeat: no-repeat;
+                background-position: center;
+    
+                &:hover span {
+                    visibility: visible;
+                    opacity: 1;
+                }
+    
+                span {
+                    position: absolute;
+                    top: 4px;
+                    right: 55px;
+                    height: 32px;
+                    line-height: 26px;
+                    padding: 3px 10px;
+                    width: auto;
+                    font-size: 11px;
+                    color: #fff;
+                    text-align: center;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    background-color: #000;
+                    opacity: 0;
+                    -ms-transition: all 200ms linear;
+                    -webkit-transition: all 200ms linear;
+                    transition: all 200ms linear;
+    
+                    &::after {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-color: transparent transparent transparent #000;
+                        position: absolute;
+                        left: 100%;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        -ms-transition: all 200ms linear;
+                        -webkit-transition: all 200ms linear;
+                        transition: all 200ms linear;
+                    }
+                }
+            }
+        }
+}
+
+.contactInfoRespon {
+    visibility: visible;
+
+    &-item:first-child {
+        background-color: red ;
+    }
+
+    &-item:nth-child(2) {
+        background-color: #3985f7;
+    }
+
+    &-item:last-child {
+        background-color: #70f3ff;
+    }
+
+}
+
+.active{
+    right: 0 !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width:989px) {
+    .contactInfo{
+        display:none;
+    }
+    
+}
+
+@media (min-width:989px) {
+    .contactInfoRespon {
+        display: none;
+    }
+
+}

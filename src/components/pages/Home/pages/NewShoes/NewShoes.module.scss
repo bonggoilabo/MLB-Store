@@ -1,0 +1,30 @@
+.wrapper {
+    margin-bottom: 50px;
+}
+
+.inner{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
+
+}
+
+
+.banner-product{
+    margin: 40px auto;
+    max-width: 1170px;
+    a{
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+    a img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media only screen and (max-width: 820px) {
+}

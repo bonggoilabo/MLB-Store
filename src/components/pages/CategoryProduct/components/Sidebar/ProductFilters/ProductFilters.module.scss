@@ -1,0 +1,134 @@
+.aside {
+    &-item {
+        margin-bottom: 15px;
+    }
+
+    &-title {
+        font-size: 18px;
+        color: #333;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 10px;
+        position: relative;
+        cursor: pointer;
+        padding-right: 25px;
+
+        span {
+            height: 20px !important;
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: center;
+            line-height: 20px;
+            transition: all 0.5s;
+        }
+    }
+
+    &-content {
+        overflow-y: auto;
+        overflow: hidden;
+        max-height: 290px;
+    }
+}
+
+
+.activeColor::after {
+    display: block;
+    content: "";
+    width: 10px;
+    height: 10px !important;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: initial;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url("https://bizweb.dktcdn.net/100/446/974/themes/849897/assets/check-symbol-black.png?1669310855464");
+    background-color: initial !important;
+}
+
+.activeLogo {
+    i::after {
+        background-color: var(--primary);
+    }
+}
+
+.filter {
+    &-logo,&-trademark {
+        li {
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 14px;
+
+            i {
+                height: 11px !important;
+                width: 11px;
+                border: solid 1px #E7E7E7;
+                display: inline-block;
+                margin-right: 10px;
+                top: 1px;
+                position: relative;
+            }
+
+            &:hover i {
+                color: var(--primary);
+                border: solid 1px var(--primary);
+            }
+
+            &:hover {
+                color: var(--primary);
+            }
+
+        }
+    }
+    &-color {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(29px,1fr));
+        grid-gap: 4px;
+    
+        li {
+            display: block;
+            width: 29px;
+            height: 29px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+    }
+    &-tag{
+        display: flex;
+        flex-wrap: wrap;
+        button{
+            margin-bottom: 5px;
+            margin-right: 10px;
+            border: solid 1px #E7E7E7;
+            background-color: #fff;
+            height: 25px;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 14px;
+            color: #000;
+            padding: 5px;
+            font-family:"montserrat",sans-serif;
+            &:hover{
+                border-color: var(--primary);
+                color: var(--primary);
+            }
+        }
+        
+    }
+}
+
+.activeTag{
+    border: 1px solid var(--primary) !important;
+    color: var(--primary) !important;
+}
+
+.activeLogo i {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}

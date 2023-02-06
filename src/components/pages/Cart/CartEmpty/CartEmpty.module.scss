@@ -1,0 +1,17 @@
+.cart-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 300px;
+
+    img {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-weight: normal;
+        margin-top: 20px;
+    }
+}

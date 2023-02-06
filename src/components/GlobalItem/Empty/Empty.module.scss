@@ -1,0 +1,18 @@
+.empty {
+    padding: 15px;
+    position: relative;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+    margin:20px;
+    font-family: "montserrat", sans-serif;
+    font-size: 14px;
+    button {
+        position: absolute;
+        right: 20px;
+        outline: none;
+        border: none;
+        font-size: 20px;
+        background-color: transparent;
+        color: #cccc;
+    }
+}

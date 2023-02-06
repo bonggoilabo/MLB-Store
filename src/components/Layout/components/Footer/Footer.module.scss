@@ -1,0 +1,241 @@
+.wrapper{
+    background-color:black;
+    position: relative;
+}
+
+.inner{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.wrapper::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url("https://bizweb.dktcdn.net/100/446/974/files/mlb-vietnam-chan-trang.png?v=1646201403497");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: saturate(0);
+    opacity: 0.2;
+}
+
+.footer{
+    &-container{
+        display:grid;
+        grid-template-columns: 35% 20% 20% 25%;
+        padding: 60px 0 40px;
+        position: relative;
+      
+    }
+    &-logo{
+        margin-bottom: 25px;
+        position: relative;
+        a{
+            display: block;
+            height: 38px;
+            overflow: hidden;
+            color: #fff;
+        }
+        a img{
+            vertical-align: middle;
+            border-style: none;
+            height: 100%;
+            width: auto;
+        }
+    }
+    &-contact{
+        li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+            p{
+                color: #fff;
+                margin-bottom: 15px;
+            }
+            a {
+                color: #fff;
+                font-size: 14px;
+            }
+            span {
+                color: #fff;
+            }
+            svg {
+                color: #fff;
+                position: absolute;
+                left: 0;
+                top: 3px;
+            }
+        }
+    }
+    &-column{
+        padding: 0 15px;
+        h3 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        ul li {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+    }
+    &-column:first-child{
+        grid-column: 1/2;
+    }
+    &-menu{
+        display: flex;
+        flex-direction: column;
+        a{
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+    }
+   
+    &-mail{
+        margin-top: 20px;
+        h4{
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 15px;
+        }
+        form{
+            position: relative;
+            margin-bottom: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            input{
+                height: 38px;
+                min-height: 38px;
+                line-height: 38px;
+                background: #fff;
+                border-color: #fff;
+                font-size: 14px;
+                color: #333;
+                outline: none;
+                border: none;
+                border: 1px solid #e1e1e1;
+                padding: 0 10px;
+                width: 100%;
+            }
+            span{
+                display: inline-block;
+                background: #000;
+                margin-left: 0px;
+                font-size: 14px;
+                color: #fff;
+                border: solid 1px #000;
+                width: 108px;
+                button{
+                    height: 36px;
+                    line-height: 36px;
+                    width: 100%;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border: initial;
+                    background: #000;
+                    font-family: "montserrat", sans-serif;
+                    &:hover{
+                        background: #333;
+                    }
+                }
+            }
+        }
+    }
+    &-copyright {
+        padding: 12px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        display: flex;
+        justify-content:center;
+        font-size: 14px;
+        align-items: center;
+        text-align: center; 
+        color: #fff;
+        span a{
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+}
+
+.btn-social {
+    display: flex;
+    flex-direction: row;
+    a {
+        display: block;
+        background-color: #000;
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-right: 5px;
+        transition: all 1s;
+        &:hover{
+            background-color: #fff;
+        }
+        &:hover svg{
+            color: #000;
+        }
+        svg {
+            color: #fff;
+            font-size: 25px;
+            height: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 990px) {
+   
+}
+
+@media (min-width: 922px) and (max-width:990px) {
+    .inner {
+        max-width: 720px;
+    }
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 15px;
+    }
+
+    .footer-column:nth-child(1) {
+        grid-column: 1/4;
+    }
+}
+
+
+@media (max-width: 769px)  {
+    
+    .inner {
+        max-width: 540px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(fit-content, 1fr);
+    }
+
+    .footer-column:nth-child(2) ul{
+        display: none;
+    }
+    .footer-menu {
+        display: none;
+    }
+    .btn-social{
+        display: none;
+    }
+    .footer-mail 
+    {
+        margin: 0;
+        form {
+            display: none;
+        }
+    }
+}

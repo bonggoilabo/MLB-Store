@@ -1,0 +1,222 @@
+.sidebar{
+    padding: 0 15px;
+    position:sticky;
+    top: var(--default-layout-header-height);
+}
+
+.filter-icon{
+    display: none;
+}
+.overlay {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    background-color: #000;
+    max-width: 122%;
+    height: 100vh;
+    opacity: 0.3;
+    z-index: 100;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.wrapper{
+    flex: 1;
+}
+
+@media only screen and (max-width: 990px) {
+    .wrapper {
+        position: fixed;
+        right: -256px;
+        top: 0;
+        bottom: 0;
+        width: 256px;
+        background-color: #fff;
+        z-index: 9999;
+        padding: 15px 0;
+    }
+    
+    .open {
+        right: 0;
+        transition: all 0.25s linear;
+        visibility: visible !important;
+    }
+
+    .hidden {
+        right: -256px;
+        transition: all 0.25s linear;
+    }
+    .filter-icon{
+        position: absolute;
+        background-color: #000;
+        top: 35% !important;
+        display: block;
+        left: -40px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 20px 0px 0px 20px;
+        svg{
+            width: 20px;
+            height: 20px;
+            color: #fff;
+            vertical-align: -10%;
+        }
+    }
+}
+
+.aside{
+    &-item{
+        margin-bottom: 15px;
+    }
+    &-title{
+        font-size: 18px;
+        color: #333;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 10px;
+        position: relative;
+        cursor: pointer;
+        padding-right: 25px;
+        span{
+            height: 20px !important;
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: center;
+            line-height: 20px;
+            transition: all 0.5s;
+        }
+    }
+    &-content {
+        overflow-y: auto;
+        overflow: hidden;
+        max-height: 290px;
+    }
+}
+
+
+.filter{
+    &-sort{
+        li{
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 14px;
+            i{
+                height: 11px !important;
+                width: 11px;
+                border: solid 1px #E7E7E7;
+                display: inline-block;
+                margin-right: 10px;
+                border-radius: 100%;
+                top: 1px;
+                position: relative;
+            }
+            &:hover i {
+                color: var(--primary);
+                border: solid 1px var(--primary);
+            }
+            &:hover {
+                color: var(--primary);
+            }
+           
+        }
+    }
+    &-classify,
+    &-distributor,
+    &-logo{
+        li{
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 14px;
+            &:hover{
+                color: var(--primary);
+            }
+            &:hover i::before {
+                border-color: var(--primary);
+            }
+        }
+        li i {
+            margin-right: 4px;
+            width: 14px;
+            position: relative;
+            display: inline-block;
+            &::before {
+                content: "";
+                margin-right: 5px;
+                font-size: 18px;
+                border: solid 1px #E7E7E7;
+                line-height: 40px;
+                position: absolute;
+                top: -12px;
+                height: 11px !important;
+                width: 11px;
+            }
+            
+        }
+    }
+    &-tab{
+        button{
+            padding: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            margin: 0 2.5px;
+        }
+    }
+    &-color{
+        display: grid !important;
+        grid-template-columns: repeat(9, 1fr);
+        grid-gap: 4px;
+        li{
+            display: block;
+            width: 29px;
+            height: 29px;
+            border-radius: 50%;
+            position: relative;
+        }
+    }
+}
+
+.activeColor::after{
+    display: block;
+    content: "";
+    width: 10px;
+    height: 10px !important;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: initial;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url("https://bizweb.dktcdn.net/100/446/974/themes/849897/assets/check-symbol-black.png?1669310855464");
+    background-color: initial !important;
+}
+.activeLogo{
+    i::after{
+        background-color: var(--primary);
+    }
+}
+
+.active {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+// .hidden{
+//     display:none;
+// }
+
+// @keyframes hidden {
+    
+//     0%{
+//         max-height: 0;
+//     }
+//     100% {
+//         max-height: 300px;
+//     }
+// }
